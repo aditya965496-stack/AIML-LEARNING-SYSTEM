@@ -1,0 +1,162 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-1) 0%,
+    var(--color-neutral-1) 50%,
+    var(--color-interactive-1) 100%
+  );
+}
+
+.hero {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--space-9) var(--space-6) var(--space-8);
+  text-align: center;
+}
+
+.heroTitle {
+  font: var(--font-display);
+  color: var(--color-neutral-12);
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.03em;
+}
+
+.heroSubtitle {
+  font: var(--font-subheading);
+  color: var(--color-neutral-11);
+  max-width: 700px;
+  margin: 0 auto var(--space-6);
+  line-height: var(--font-lineheight-3);
+}
+
+.heroDescription {
+  font-size: var(--font-size-2);
+  color: var(--color-neutral-10);
+  max-width: 600px;
+  margin: 0 auto var(--space-8);
+  line-height: var(--font-lineheight-4);
+}
+
+.features {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-6);
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.featureCard {
+  background: var(--color-neutral-1);
+  border: 1px solid var(--color-neutral-6);
+  border-radius: var(--radius-4);
+  padding: var(--space-6);
+  transition: all 0.3s var(--ease-out);
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.featureCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-3);
+  border-color: var(--color-accent-7);
+}
+
+.featureIcon {
+  width: 48px;
+  height: 48px;
+  padding: var(--space-3);
+  border-radius: var(--radius-3);
+  background: var(--color-accent-3);
+  color: var(--color-accent-9);
+  margin-bottom: var(--space-4);
+}
+
+.featureTitle {
+  font: var(--font-heading);
+  font-size: var(--font-size-3);
+  color: var(--color-neutral-12);
+  margin-bottom: var(--space-3);
+}
+
+.featureDescription {
+  font-size: var(--font-size-1);
+  color: var(--color-neutral-11);
+  line-height: var(--font-lineheight-3);
+  flex: 1;
+}
+
+.featureBadge {
+  margin-top: var(--space-4);
+  align-self: flex-start;
+}
+
+.scenarios {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-6);
+  background: var(--color-neutral-2);
+}
+
+.scenariosTitle {
+  font: var(--font-heading);
+  text-align: center;
+  color: var(--color-neutral-12);
+  margin-bottom: var(--space-6);
+}
+
+.scenariosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-6);
+}
+
+.scenarioCard {
+  background: var(--color-neutral-1);
+  border: 1px solid var(--color-neutral-6);
+  border-radius: var(--radius-4);
+  padding: var(--space-6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.scenarioTitle {
+  font-weight: 600;
+  font-size: var(--font-size-2);
+  color: var(--color-accent-11);
+  margin-bottom: var(--space-3);
+}
+
+.scenarioText {
+  font-size: var(--font-size-1);
+  color: var(--color-neutral-11);
+  line-height: var(--font-lineheight-3);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--space-7) var(--space-4) var(--space-6);
+  }
+
+  .heroTitle {
+    font-size: var(--font-size-6);
+  }
+
+  .heroSubtitle {
+    font-size: var(--font-size-2);
+  }
+
+  .featuresGrid,
+  .scenariosGrid {
+    grid-template-columns: 1fr;
+  }
+}
